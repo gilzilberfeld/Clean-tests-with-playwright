@@ -3,9 +3,9 @@ import { ResultPage } from "./ResultPage";
 
 export class CalculatorPageObject {
   page: Page;
-  firstOp: Locator;
-  secondOp: Locator;
-  button: Locator;
+  firstOp!: Locator;
+  secondOp!: Locator;
+  button!: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -27,7 +27,7 @@ export class CalculatorPageObject {
     await this.secondOp.fill(opVal);
   }
 
-  async click(): Promise<ResultPage> {
+  async calculate(): Promise<ResultPage> {
     await this.button.click();
     return new ResultPage(this.page);
   }

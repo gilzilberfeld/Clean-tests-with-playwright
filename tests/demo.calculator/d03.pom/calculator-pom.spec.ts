@@ -7,7 +7,7 @@ test("calculator test", async ({ page }) => {
 
   await calcPage.setFirstOp("1")
   await calcPage.setSecondOp("2")
-  const resultPage  = await calcPage.click()
+  const resultPage  = await calcPage.calculate()
 
   await resultPage.validateResult()
 });

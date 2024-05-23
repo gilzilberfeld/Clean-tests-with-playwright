@@ -1,7 +1,6 @@
 import { Locator, Page } from "@playwright/test";
-import { ANY_INPUT, ANY_VALID_EMAIL, REGISTRATION_PAGE } from "../consts";
+import { ANY_INPUT, REGISTRATION_PAGE } from "../consts";
 import { ThankYouPage } from "./thank_you_page";
-import { PageFactory } from "./pagefactory";
 
 const TITLE = "Register to the magnificent Newsletter!";
 const FIRST_NAME_ID = "First Name";
@@ -15,13 +14,13 @@ const VALIDATION_MESSAGE = "Please make sure all fields are filled correctly.";
 export class RegisterPage {
   
   page: Page;
-  title: Locator;
-  firstNameBox: Locator;
-  lastNameBox: Locator;
-  emailBox: Locator;
-  promotionCheckBox: Locator;
-  termsCheckBox: Locator;
-  registerButton: Locator;
+  title!: Locator;
+  firstNameBox!: Locator;
+  lastNameBox!: Locator;
+  emailBox!: Locator;
+  promotionCheckBox!: Locator;
+  termsCheckBox!: Locator;
+  registerButton!: Locator;
 
   constructor(page: Page) {
     this.page = page;
