@@ -11,7 +11,7 @@ export class CalculatorPageObject {
     this.page = page;
   }
 
-  async goto(path: string) {
+  async initialize() {
     await this.page.goto("/calculator");
 
     this.firstOp = this.page.getByRole("textbox", { name: "First" });

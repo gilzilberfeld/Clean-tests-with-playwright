@@ -3,7 +3,7 @@ import { CalculatorPageObject } from "./CalculatorPage";
 
 test("calculator test", async ({ page }) => {
   const calcPage = new CalculatorPageObject(page);
-  await calcPage.goto("/calculator");
+  await calcPage.initialize();
 
   await calcPage.setFirstOp("1")
   await calcPage.setSecondOp("2")

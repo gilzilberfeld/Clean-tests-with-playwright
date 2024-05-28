@@ -10,7 +10,7 @@ export class ThankYouPage {
   }
   
   page: Page;
-  errorMessage: Locator;
+  errorMessage!: Locator;
 
   constructor(page: Page) {
     this.page = page;
